@@ -52,7 +52,7 @@ h1 {
 
 .wrapper .input {
     width: 100%;
-    margin-top: 25px;
+    margin: 25px 0 20px 0;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -87,7 +87,10 @@ h1 {
 ul li {
     list-style: none;
     font-size: 17px;
+    font-weight: 500;
+    color: #4b4a54;
     padding: 12px 8px 12px 50px;
+    position: relative;
     user-select: none;
     cursor: pointer;
 }
@@ -100,9 +103,19 @@ ul li::before {
     border-radius: 50%;
     background-image: url(/Todo_List_App/image/square_11203018.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     top: 12px;
     left: 8px;
+}
+
+ul li.checked {
+    color: #939292;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(/Todo_List_App/image/check_18827474.png);
 }
 
  
