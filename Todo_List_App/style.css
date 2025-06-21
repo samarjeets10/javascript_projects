@@ -89,34 +89,75 @@ ul li {
     font-size: 17px;
     font-weight: 500;
     color: #4b4a54;
-    padding: 12px 8px 12px 50px;
+    padding: 12px 8px 12px 8px;
+    border-bottom: 2px solid #eeecee;
+    border-radius: 8px;
     position: relative;
     user-select: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-ul li::before {
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(/Todo_List_App/image/square_11203018.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    top: 12px;
-    left: 8px;
+ul li .task {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-ul li.checked {
-    color: #939292;
+.task input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    margin-right: 22px;
+    background-color: #fff7ff;
+    border-radius: 6px;
+    border: 2px solid #ed832c;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-list .task input[type="checkbox"]:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f00c';
+    font-size: 22px;
+    color: #ed832c;
+    display: none;
+}
+
+.task-list .task p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #4b4a54;
+}
+
+p.task-complete {
     text-decoration: line-through;
+    color: #9c9c9c;
 }
 
-ul li.checked::before {
-    background-image: url(/Todo_List_App/image/check_18827474.png);
+.task-list button {
+    padding: 10px 16px;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    color: #7c7c7c;
+    cursor: pointer;
 }
+
+
+
+
+
+
+
+
 
  
 
