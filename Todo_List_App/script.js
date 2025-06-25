@@ -1,37 +1,51 @@
 
-const inputTask = document.getElementById('input-task');
-const addTask = document.getElementById('add-task');
-const taskContainer = document.querySelector('.task-container');
-let userInput;
+const input = document.getElementById('task');
+const addBtn = document.getElementById('add-btn');
+const listContainer = document.querySelector('.task-list');
 
 
-addTask.addEventListener('click', () => {
-
-    if (inputTask.value === "") {
-        alert("Pleases Enter a Valid Task!!")
-    } else {
-        userInput = inputTask.value;
-        createTaskList();
-    }
+addBtn.addEventListener('click', () => {
+    validateInput();
 });
 
+function validateInput() {
 
-function createTaskList() {
+    if (input.value === "") {
+        console.log("Please enter a valid Task");
+    } else {
+        addTaskList();
+    }
+};
 
-    let listItem = `
-                <li class="task-list">
-                    <div class="task">
-                        <input type="checkbox"id="check-box">
-                        <p class="task-name">${userInput}</p>
-                    </div>
-                    <button class="delete-btn">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </button>
-                </li>`;
 
-    let deleteBtn = document.querySelector('.delete-btn');
-    console.log(deleteBtn);
+function addTaskList() {
+    
+    let inputValue = input.value;
+    
+    const taskElement = document.createElement('li');
+    const taskRemove = document.createElement('button');
 
-    taskContainer.innerHTML += listItem;
-    inputTask.value = "";
-}
+    taskElement.setAttribute('class', 'task-item');
+
+    taskElement.innerHTML = 
+            `<p class="task-content">${inputValue}</p>
+            <button class="button">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+            `
+    
+    listContainer.appendChild(taskElement);
+    input.value = "";
+};
+
+
+
+listContainer.addEventListener('click', (e) => {
+
+    //console.log(e.target);
+
+    if (e.target.closest('.button')) {
+        const newTask = e.target.closest('.task-item');
+        newTask.remove(); 
+    }
+})

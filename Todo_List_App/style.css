@@ -1,9 +1,7 @@
 
 /* Google fonts */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Dosis:wght@500&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lily+Script+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
 /* General Style */
 
@@ -16,140 +14,131 @@
 body {
     width: 100vw;
     height: 100vh;
-    font-family: 'Noto Sans' ;
+    font-family: "Lexend Deca", sans-serif;
 }
 
 .main {
-    width: 100%;
     height: 100%;
-    background: linear-gradient(to right top, #6ba5d1, #5c9bd0, #4e90cf, #4385cd, #3c79ca, #3c76cd, #3e73d0, #426fd2, #4873dc, #4f77e7, #577bf1, #5f7ffb);
+    width: 100%;
+    background-color: #F5EFFF;
     position: relative;
-   
 }
 
 .wrapper {
-    width: 80vmin;
-    padding: 40px 35px;
-    border: none;
-    border-radius: 16px;
-    background-color: #fff7ff;
+    width: 500px;
+    padding: 20px 32px;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    background-color: #A294F9;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.176) 0px 4px 12px;
+
 }
 
-
-/* Header */
-
-h1 {
-    font-size: 2.1rem;
+.wrapper h2 {
+    font-size: 28px;
     font-weight: 600;
-    color: black;
+    letter-spacing: 0.2px;
+    color: #F5EFFF;
+    margin-bottom: 18px;
 }
 
-/* Input */
-
-.wrapper .input {
+.input-info {
     width: 100%;
-    margin: 25px 0 20px 0;
+}
+
+.input-info .input-box {
+    width: 100%;
+    padding: 6px 8px 6px 18px;
     display: flex;
     align-items: center;
-    gap: 8px;
-}
-
-.input .task-input {
-    width: 80%;
-    padding: 16px 26px;
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    border-radius: 40px;
-    background-color: #eeecee;
-    color: #4b4a54;
-    outline: none;
-}
-
-.input button {
-    width: 20%;
-    padding: 14px 18px;
-    font-size: 18px;
-    background-color: #ed832c;
-    color: #fff7ff;
-    border: none;
-    border-radius: 40px;
-}
-
- 
-/* Task List */
-
-
-ul li {
-    list-style: none;
-    font-size: 17px;
-    font-weight: 500;
-    color: #4b4a54;
-    padding: 12px 8px 12px 8px;
-    border-bottom: 2px solid #eeecee;
+    justify-content: space-between;
+    gap: 16px;
+    background-color: #F5EFFF;
     border-radius: 8px;
-    position: relative;
-    user-select: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+
 }
 
-ul li .task {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.task input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    height: 24px;
-    width: 24px;
-    margin-right: 22px;
-    background-color: #fff7ff;
-    border-radius: 6px;
-    border: 2px solid #ed832c;
-    cursor: pointer;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.task-list .task input[type="checkbox"]:after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\f00c';
-    font-size: 22px;
-    color: #ed832c;
-    display: none;
-}
-
-.task-list .task p {
+.input-box input::placeholder {
     font-size: 17px;
     font-weight: 600;
-    color: #4b4a54;
+    color: #b2b0b8;
 }
 
-p.task-complete {
-    text-decoration: line-through;
-    color: #9c9c9c;
+.input-box input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #5C4B99;
+    background-color: transparent;
+   
 }
 
-.task-list button {
-    padding: 10px 16px;
-    font-size: 18px;
+.input-box button {
+    height: 35px;
+    padding: 6px 14px;
+    border: none;
+    background-color: #A294F9;
+    color: #F5EFFF;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: backgound-color 0.3s ease;
+}
+
+.input-box button:hover {
+    background-color: #8F87F1;
+}
+
+.task-list .task-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.wrapper .task-list .task-item {
+    list-style: none;
+    margin-top: 18px;
+    padding: 10px 18px;
+    border: 1px solid #bbbb;
+    background-color: #F5EFFF;
+    border-radius: 8px;
+}
+
+.wrapper .task-list .task-item p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #8F87F1;
+}
+
+.task-list .task-item button {
     border: none;
     background-color: transparent;
-    color: #7c7c7c;
     cursor: pointer;
+    font-size: 18px;
 }
+
+.task-list .task-item button i {
+    color: #8F87F1;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
