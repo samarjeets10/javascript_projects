@@ -126,7 +126,12 @@ body {
     font-size: 18px;
 }
 
+
 .task-list .task-item button i {
+    color: #5C4B99;
+}
+
+.task-item button i:hover {
     color: #8F87F1;
 }
 

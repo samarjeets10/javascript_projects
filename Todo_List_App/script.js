@@ -39,6 +39,8 @@ function addTaskList() {
 };
 
 
+// Event Deligation :
+
 
 listContainer.addEventListener('click', (e) => {
 
