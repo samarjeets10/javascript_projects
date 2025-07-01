@@ -1,0 +1,252 @@
+
+
+/* Google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+/* general styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    padding: 18px 32px;
+    /* position: fixed; */
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* header Title */
+
+
+header h3 {
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+}
+
+.toggler {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* Toggle button style */
+
+
+.toggler .mode-btn {
+    height: 22px;
+    width: 44px;
+    background: transparent;
+    border: 2px solid #a2a2a2;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+
+.mode-btn .thumb {
+    height: 100%;
+    width: 50%;
+    z-index: 99;
+    background-color: #a2a2a2;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.mode-active {
+    transform: translateX(100%);
+}
+
+
+/* toggle Dark Background */
+
+
+.dark-Mode {
+    background-color: #181818;
+    color: #fff;
+}
+
+
+/* Main style */
+
+
+main {
+    width: 100%;
+    display: flex;
+    padding: 4em 3.5em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+main .main-Title {
+    max-width: 700px;
+    padding: 0 1.5em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-Title h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+.main-Title p {
+    padding: 0 18px;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    color: #a4a4a4;
+    line-height: 1.6;
+}
+
+
+/* Media quer for the main section */
+
+@media (max-width: 400px) {
+  .main-Title {
+    padding: 0 1em;
+  }
+
+  .main-Title h1 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+
+  .main-Title p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+
+/* button */
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Grid Conteiner */
+
+.grid-container {
+    --grid-min-col-size: 300px;
+    width: 100%;
+    padding: 1.2em 0.4em;
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fill, minmax(min(var(--grid-min-col-size), 100%), 1fr));
+    gap: 1rem;
+}
+
+.grid-container .grid-item {
+    padding: 0.8em;
+    border: 1px solid #a2a2a2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* play ground style */
+
+
+.grid-item .play-ground {
+    height: 180px;
+    width: 100%;
+    position: relative;
+    padding: 0.5em;
+    border: 1px solid #a2a2a2;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* discription */
+
+
+.grid-item .discription {
+    width: 100%;
+    padding-inline: 0.25em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-item .discription p {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.discription .rating {
+    text-align: center;
+    cursor: pointer;  
+}
+
+.discription .rating i {
+    font-size: 1rem;
+
+    &:active,
+    &:hover {
+        color: #FFB22C;
+    }
+}
+
+
+
+
+/* copy-code btn */
+
+
+.grid-item .play-ground .copy-code {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
