@@ -2,7 +2,9 @@
 
 /* Google font */
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
 /* general styling */
@@ -234,6 +236,42 @@ main .main-Title {
     top: 16px;
     right: 16px;
     cursor: pointer;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    padding: 1.5em 0 1.8em 0;
+    text-align: center;
+}
+
+footer p span {
+    font-family: "Pacifico", cursive;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-inline: 0.2em;
+    color: #FFB22C;
+}
+
+footer .contact-me {
+    margin: 1em 0;
+}
+
+.contact-me a{
+    text-decoration: none;
+}
+
+.contact-me a i {
+    font-size: 1.4rem;
+    padding-inline: 0.25rem;
+    color: #a4a4a4;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: #4E71FF;
+    }
 }
 
 
