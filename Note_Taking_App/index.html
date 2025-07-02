@@ -14,7 +14,7 @@
     <header>
         <h1>Quick Notes</h1>
         <div>
-            <button class="add-note-btn" onclick="openNoteDialog()">+ Add Note</button>
+            <button class="add-note-btn">+ Add Note</button>
             <button id="themeToggleBtn" class="theme-toggle-btn">🌙</button>
         </div>
     </header>
@@ -33,7 +33,7 @@
         <div class="dialog-content">
             <div class="dialog-header">
                 <h2 class="dialog-title" id="dialogTitle">Add New Note</h2>
-                <button class="close-btn" onclick="closeNoteDialog()">X</button>
+                <button class="close-btn">x</button>
             </div>
 
             <form id="noteForm">
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="dialog-actions">
-                    <button type="button" class="cancle-btn" onclick="closeNoteDialog()">Cancle</button>
+                    <button type="button" class="cancel-btn">Cancle</button>
                     <button type="submit" class="save-btn">Save Note</button>
                 </div>
             </form>
@@ -56,6 +56,6 @@
 
     
 
-<script src="script.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>
