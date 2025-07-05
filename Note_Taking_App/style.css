@@ -104,14 +104,23 @@ header .actions {
 
 .dislog-box {
   min-width: 280px;
-  width: 400px;
+  width: 60vmin;
   padding: 2em 2.2em;
-  border: 2px solid #ccc;
+  border: 2px solid #fff;
   border-radius: 16px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.dislog-box.dialogActive {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .noteHeader {
