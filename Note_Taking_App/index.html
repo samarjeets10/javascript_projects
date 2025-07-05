@@ -27,11 +27,18 @@
     <!-- Notes Container Grid -->
 
     <main id="notesContainer" class="notes-grid">
+        <!-- <div class="note-card">
+            <h2 class="note-title">No Notes Added</h2>
+            <p class="note-discription">Click on the button to add notes </p>
+            <button id="deleteBtn">Delete Note</button>
+        </div> -->
     </main>
 
     <!--  -->
 
     <!-- Add Note Dialog -->
+
+    <div class="overlay"></div>
 
     <div class="dislog-box">
 
@@ -42,12 +49,12 @@
 
         <div class="dialog-title">
             <label for="input-title" class="inputTitle">Title</label>
-            <input type="text" id="input-title" placeholder="Enter nots title here...">
+            <input type="text" id="input-title" placeholder="Enter nots title here..." required>
         </div>
 
         <div class="dialog-discription">
             <label for="note-discription" class="note-discription">Content</label>
-            <textarea name="" id="text-area"></textarea>
+            <textarea name="" id="text-area" required></textarea>
         </div>
 
         <div class="dialog-actions">
@@ -56,8 +63,6 @@
         </div>
     </div>
 
-    
-    
 
 <script src="script.js"></script>
 </body>
