@@ -1,0 +1,29 @@
+
+/*  Component Buttons Style */
+
+/* Button - 01 */
+
+#btn-01 {
+    padding: 8px 18px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.8s ease;
+
+}
+
+#btn-01::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: red;
+    top: 0;
+    left: -100%;
+    border-radius: 6px;
+    z-index: -1;
+}

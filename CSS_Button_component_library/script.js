@@ -36,43 +36,50 @@ function darkModeOff () {
 // Like and Unlike Button :
 
 
-const countLike = document.getElementById('like-count');
-const likeBtn = document.getElementById('likeBtn');
+const countLike = document.querySelectorAll('.like-count');
+const likeBtn = document.querySelectorAll('.likeBtn');
 
-let isActive = localStorage.getItem("likeStatus") === "true";
-let likeCount = localStorage.getItem('likeCount') || 0;
+likeBtn.forEach((btn, index) => {
 
-if (isActive === true) {
-    like();
-    countLike.textContent = `${likeCount}`;
-}
 
-likeBtn.addEventListener('click', () => {
-    isActive = !isActive;
-    console.log(isActive);
+    let isActive = localStorage.getItem(`likeStatus-${index}`) === "true";
+    let likeCount = parseInt(localStorage.getItem(`likeCount-${index}`)) || 0;
 
-    if (isActive) {
-        like();
-    } else {
-        dislike();
+    if (isActive === true) {
+        like(btn, index);
     }
 
-    countLike.textContent = `${likeCount}`;
+    countLike[index].textContent = `${likeCount}`;
 
-    //  Save to Local Storage :
+    btn.addEventListener('click', () => {
+        isActive = !isActive;
+        console.log(isActive);
 
-    localStorage.setItem("likeStatus", isActive);
-    localStorage.setItem("likeCount", likeCount);
+        if (isActive) {
+            likeCount = like(btn, likeCount);
+        } else {
+            likeCount = dislike(btn, likeCount);
+        }
+
+        countLike[index].textContent = `${likeCount}`;
+
+        //  Save to Local Storage :
+
+        localStorage.setItem(`likeStatus-${index}`, isActive);
+        localStorage.setItem(`likeCount-${index}`, likeCount);
+    });
+
+
 });
 
-function like () {
-    likeBtn.classList.add('active');
-    likeCount++;
+function like (btn, _likeCount) {
+    btn.classList.add('active');
+    return likeCount =+ 1;
 }
 
-function dislike () {
-    likeBtn.classList.remove('active');
-    likeCount--;
+function dislike (btn, likeCount) {
+    btn.classList.remove('active');
+    return likeCount -= 1;
 }
 
 
