@@ -220,14 +220,11 @@ main .main-Title {
 
 .discription .rating i {
     font-size: 1rem;
-
-    &:active,
-    &:hover {
-        color: #FFB22C;
-    }
 }
 
-
+.rating i.active {
+    color: gold;
+}
 
 
 /* copy-code btn */
