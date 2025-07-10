@@ -80,6 +80,21 @@ function like (btn, _likeCount) {
 function dislike (btn, likeCount) {
     btn.classList.remove('active');
     return likeCount -= 1;
-}
+};
 
 
+
+
+// 
+
+const codeBtn = document.getElementById('codeBtn');
+const codeWindow = document.querySelector('.wrapper');
+const closeBtn = document.getElementById('close-btn');
+
+codeBtn.addEventListener('click', () => {
+    codeWindow.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    codeWindow.classList.remove('active');
+})
