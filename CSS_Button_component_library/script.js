@@ -24,12 +24,12 @@ modeBtn.addEventListener('click', () => {
 
 function darkModeOn () {
     modeBtn.classList.add('active');
-    document.body.classList.add('dark-Mode');
+    document.body.classList.add('dark');
 }
 
 function darkModeOff () {
     modeBtn.classList.remove('active');
-    document.body.classList.remove('dark-Mode');
+    document.body.classList.remove('dark');
 };
 
 
@@ -85,16 +85,22 @@ function dislike (btn, likeCount) {
 
 
 
-// 
+// Code pop up Window open and close :
 
-const codeBtn = document.getElementById('codeBtn');
+const codeBtn = document.querySelectorAll('.codeBtn');
 const codeWindow = document.querySelector('.wrapper');
-const closeBtn = document.getElementById('close-btn');
+const closeBtn = document.querySelector('.close-btn');
 
-codeBtn.addEventListener('click', () => {
-    codeWindow.classList.add('active');
+
+codeBtn.forEach(function (btn) {
+    btn.addEventListener('click', () => {
+        codeWindow.classList.add("active");
+        document.body.classList.add('lock-scroll');
+    })
 });
 
 closeBtn.addEventListener('click', () => {
-    codeWindow.classList.remove('active');
-})
+    codeWindow.classList.remove("active");
+    document.body.classList.remove('lock-scroll');
+});
+
