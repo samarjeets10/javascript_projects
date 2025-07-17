@@ -1,161 +1,331 @@
 
-/* Google fonts */
+/* Google Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* General Style */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-* {
+
+/* root */
+
+:root {
+
+    /* font-family */
+
+    /* --font: "Space Mono", monospace; */
+    --font: "Rubik", sans-serif;
+
+    /* color */
+
+    --nav-background : #F5E6CF;
+    --body-background : #F9F5EA;
+    --border-color : #b4b4b8;
+    --green-button : #1BA065;
+    --red-button : #F65859;
+    --black-color : #000;
+    --white-color : #fff;
+    --gray-color : #737373;
+    --logo-text-color : #4d82d8;
+}
+
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    font-family: "Lexend Deca", sans-serif;
+    width: 100%;
+    /* height: 100dvh; */
+    font-family: var(--font);
 }
 
-.main {
+.nav-bar {
+    width: 100%;
+    padding: 1.4em 4em;
+    background-color: var(--nav-background);
+    border-bottom: 3px solid var(--black-color);
+}
+
+.nav-bar #logo h2 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--logo-text-color);
+}
+
+main {
     height: 100%;
     width: 100%;
-    background-color: #F5EFFF;
-    position: relative;
+    padding: 4em 3em;
+    background-color: var(--body-background);
 }
 
-.wrapper {
-    width: 500px;
-    padding: 20px 32px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    background-color: #A294F9;
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.176) 0px 4px 12px;
-
-}
-
-.wrapper h2 {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    color: #F5EFFF;
-    margin-bottom: 18px;
-}
-
-.input-info {
+.title-text {
     width: 100%;
-}
-
-.input-info .input-box {
-    width: 100%;
-    padding: 6px 8px 6px 18px;
     display: flex;
+    margin-bottom: 2rem;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    background-color: #F5EFFF;
-    border-radius: 8px;
-
+    justify-content: center;
 }
 
-.input-box input::placeholder {
-    font-size: 17px;
+.title-text h1 {
+    margin-bottom: 8px;
+    font-size: 2.4rem;
     font-weight: 600;
-    color: #b2b0b8;
+    text-align: center;
 }
 
-.input-box input {
+.title-text p {
+    width: 60%;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--gray-color);
+    max-width: 550px;
+    line-height: 1.5;
+}
+
+.input-section {
     width: 100%;
-    height: 35px;
-    border: none;
+    margin-bottom: 4em;
+}
+
+.input-section form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+form input {
+    padding: 14px 22px;
+    font-size: 1.1rem;
+    background-color: var(--body-background);
     outline: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: #5C4B99;
-    background-color: transparent;
-   
-}
-
-.input-box button {
-    height: 35px;
-    padding: 6px 14px;
-    border: none;
-    background-color: #A294F9;
-    color: #F5EFFF;
-    font-weight: 600;
-    font-size: 16px;
     border-radius: 4px;
+}
+
+form input[type="text"] {
+    width: 350px;
+    color: var(--black-color);
+    box-shadow: 3px 3px 0 var(--black-color);
+}
+
+form input[type="date"] {
+    width: 200px;
+    box-shadow: 3px 3px 0 var(--black-color);
+}
+
+form button {
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid var(--black-color);
+    border-radius: 4px;
+    color: var(--white-color);
+    background-color: var(--red-button);
+    box-shadow: 3px 3px 0 var(--black-color);
     cursor: pointer;
-    transition: backgound-color 0.3s ease;
 }
 
-.input-box button:hover {
-    background-color: #8F87F1;
+
+@media (max-width: 600px) {
+    .title-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .title-text p {
+        width: 90%;
+        font-size: 0.95rem;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+    }
+
+    form input[type="date"] {
+        width: 100%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form button {
+        width: 100%;
+    }
 }
 
-.task-list .task-item {
+
+.task-wrapper {
+    width: 65%;
+    margin: 2rem auto;
+    border: 2px solid var(--black-color);
+    border-radius: 4px;
+    background-color: var(--white-color);
+    box-shadow: 3px 3px 0 var(--black-color);
+    transition: width 0.3s ease;
+}
+
+.task-wrapper .wrapper-header {
+    height: 40px;
+    padding: 8px 16px;
+    background-color: var(--nav-background);
+    border-bottom: 2px solid var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper-header p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.wrapper-header span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.task-wrapper .task-container {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.task-container .task-list {
+    width: 100%;
+}
+
+.task-list .item {
+    width: 100%;
+    list-style: none;
+    padding: 16px;
+    border-radius: 4px;
+    border: 2px solid var(--black-color);
+    background-color: var(--body-background);
+    box-shadow: 1.5px 1.5px 0 var(--black-color);
+}
+
+.item .item-content {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
 }
 
-.wrapper .task-list .task-item {
-    list-style: none;
-    margin-top: 18px;
-    padding: 10px 18px;
-    border: 1px solid #bbbb;
-    background-color: #F5EFFF;
-    border-radius: 8px;
+.item-content p {
+    font-size: 1.2rem;
 }
 
-.wrapper .task-list .task-item p {
-    font-size: 17px;
-    font-weight: 600;
-    color: #8F87F1;
+.item-content .item-left {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.task-list .task-item button {
-    border: none;
-    background-color: transparent;
+.item-left i {
+    font-size: 1.5rem;
+}
+
+.item-content .item-action {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8px;
+}
+
+.item-action button {
+    padding: 4px 8px;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid var(--black-color);
+    box-shadow: 2px 2px 0 var(--black-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    font-size: 18px;
+}
+
+.item-content .delete-task {
+    background-color: var(--red-button);
+}
+
+.item-content .task-done {
+    background-color: var(--green-button);
 }
 
 
-.task-list .task-item button i {
-    color: #5C4B99;
+@media (max-width: 1024px) {
+    .task-wrapper {
+        width: 85%;
+    }
 }
 
-.task-item button i:hover {
-    color: #8F87F1;
+@media (max-width: 825px) {
+    
+    .item-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .item-content .item-left {
+        width: 75%;
+    }
 }
 
 
 
+@media (max-width: 600px) {
+    .task-wrapper {
+        width: 95%;
+    }
 
+    .task-container {
+        padding: 1rem;
+    }
 
+    .item-content .item-left {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem
+    }
 
+    .item-left, .item-action {
+        width: 100%;
+    }
 
+    .item-action {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
 
+    .item-action button {
+        width: 100%;
+        flex: 1 1 100%; 
+        font-size: 0.9rem;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
- 
-
-
+@media (max-width: 400px) {
+    .item-content .item-left {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem
+    }
+}
 
 
 

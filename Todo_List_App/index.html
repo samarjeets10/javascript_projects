@@ -10,24 +10,54 @@
 </head>
 <body>
 
-    <main class="main">
+    <nav class="nav-bar">
+        <div id="logo">
+            <h2>TO<br>DO</h2>
+        </div>
+    </nav>
 
-        <div class="wrapper">
+    <main>
+        <div class="title-text">
+            <h1>Stay Organized. Get Things Done.</h1>
+            <p>No more forgotten tasks or mental overload — just a clean, reliable system for getting things done.</p>
+        </div>
 
-            <h2>To-Do List App <span><i class="fa-regular fa-calendar-check"></i></span></h2>
-            
-            <div class="input-info">
-                <div class="input-box">
-                    <input type="text" placeholder="Add new task..." id="task">
-                    <button id="add-btn">Add</button>
-                </div>
+        <div class="input-section">
+            <form action="submit">
+                <input type="text" id="input-task" placeholder="Enter task todo..">
+                <input type="date" id="input-date">
+                <button id="add-task-btn">Add Task</button>
+            </form>
+        </div>
+
+        <div class="task-wrapper">
+            <div class="wrapper-header">
+                <p>- Tasks</p>
+                <i class="fa-solid fa-angle-down"></i>
             </div>
-
-            <ul class="task-list">
-            </ul>
-
+            <div class="task-container">
+                <ul class="task-list">
+                    <li class="item">
+                        <div class="item-content">
+                            <div class="item-left">
+                                    <i class="fa-solid fa-cube"></i>
+                                <div class="task-details">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <p>23/06/2046</p>
+                            </div>
+                            <div class="item-action">
+                                <button class="delete-task">Delete</button>
+                                <button class="task-done">Complete</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
+
+    
 
 
 <script src="script.js"></script>
