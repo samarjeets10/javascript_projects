@@ -14,6 +14,9 @@
         <div id="logo">
             <h2>TO<br>DO</h2>
         </div>
+        <div class="icon">
+            <img id="icon-image" src="./image/note_5620483.png" alt="icon">
+        </div>
     </nav>
 
     <main>
@@ -23,41 +26,29 @@
         </div>
 
         <div class="input-section">
-            <form action="submit">
+            <form>
                 <input type="text" id="input-task" placeholder="Enter task todo..">
                 <input type="date" id="input-date">
                 <button id="add-task-btn">Add Task</button>
             </form>
         </div>
 
-        <div class="task-wrapper">
-            <div class="wrapper-header">
-                <p>- Tasks</p>
-                <i class="fa-solid fa-angle-down"></i>
+        <div class="task-container">
+            <div class="container-header">
+                <h3>Your Tasks at a Glance</h3>
+                <div class="header-icon">
+                    <img src="./image/down-arrow_13077261.png" alt="arrow-image" id="image-icon">
+                </div>
             </div>
-            <div class="task-container">
-                <ul class="task-list">
-                    <li class="item">
-                        <div class="item-content">
-                            <div class="item-left">
-                                    <i class="fa-solid fa-cube"></i>
-                                <div class="task-details">
-                                    <p>Lorem ipsum dolor sit amet.</p>
-                                </div>
-                                <p>23/06/2046</p>
-                            </div>
-                            <div class="item-action">
-                                <button class="delete-task">Delete</button>
-                                <button class="task-done">Complete</button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            
+            <div class="task-content">
+                <div class="default-task">
+                    <h2>No Taks add yet</h2>
+                    <p>One Step Closer to Productivity</p>
+                </div>
             </div>
-        </div>
-    </main>
 
-    
+        </div>
 
 
 <script src="script.js"></script>
