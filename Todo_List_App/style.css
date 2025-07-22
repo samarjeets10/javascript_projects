@@ -45,7 +45,7 @@ body {
 
 .nav-bar {
     width: 100%;
-    padding: 1.4em 4em;
+    padding: 1.1em 4em;
     background-color: var(--nav-background);
     border-bottom: 3px solid var(--black-color);
     display: flex;
@@ -359,4 +359,33 @@ form button {
 .task-item button:active {
     box-shadow: 0 0 0 var(--black-color);
     transform: translate(1px);
+}
+
+.alert-toster {
+    padding: 1rem;
+    position: fixed;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border: 1px solid var(--black-color);
+    background: var(--green-button);
+    border-radius: 0.4rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.alert-toster.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.alert-toster p {
+    color: var(--white-color);
+}
+
+.alert-toster span {
+    color: var(--white-color);
 }

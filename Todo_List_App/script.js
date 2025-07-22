@@ -4,6 +4,8 @@ const inputDate = document.getElementById('input-date');
 const addTaskBtn = document.getElementById('add-task-btn');
 const taskContent = document.querySelector('.task-content');
 const defaultCard = document.querySelector('.default-task');
+const taskContainer = document.querySelector('.task-container');
+const alertTosterPopup = document.querySelector('.alert-toster'); 
 
 addTaskBtn.addEventListener('click', (task) => {
     task.preventDefault();
@@ -19,7 +21,8 @@ addTaskBtn.addEventListener('click', (task) => {
 function vallidation (userInput, userDate) {
 
     if (userInput === "" || userDate === "") {
-        alert("Please enter task and date");
+        // alert("Please enter task and date");
+        alertPopUp();
     } else {
         addTask(userInput, userDate);
         defaultCardRemove();
@@ -53,6 +56,29 @@ function addTask(userInput, userDate) {
 function inputCleanUp () {
     inputTask.value = "";
     inputDate.value = "";
+}
+
+taskContainer.addEventListener('click', (event) => {
+
+    if (event.target.classList.contains('delete-btn')) {
+        const card = event.target.closest('.task-item');
+        card.remove();
+    }
+
+    const remainingCards = taskContainer.querySelectorAll('.task-item');
+
+    if(remainingCards.length === 0) {
+        defaultCard.classList.remove('active');
+    }
+});
+
+function alertPopUp() {
+
+    alertTosterPopup.classList.add('active');
+
+    setTimeout(() => {
+        alertTosterPopup.classList.remove('active');
+    }, 2000);
 }
 
 
