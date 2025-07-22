@@ -26,6 +26,7 @@
     --white-color : #fff;
     --gray-color : #737373;
     --logo-text-color : #4d82d8;
+    --task-item-color: #F4F6FF;
 }
 
 *,
@@ -144,6 +145,7 @@ form input[type="text"] {
 form input[type="date"] {
     width: 200px;
     box-shadow: 3px 3px 0 var(--black-color);
+    cursor: pointer;
 }
 
 form button {
@@ -235,14 +237,29 @@ form button {
 .task-content {
     width: 100%;
     position: relative;
-    padding: 1.2rem 1.4rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 .task-content .default-task {
     width: 50%;
+    display: block;
     padding: 1rem;
     margin: auto;
     text-align: center;
+    transition: all 0.3 ease;
+}
+
+.default-task.active {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    pointer-events: none;
+    transition: all 0.3 ease;
 }
 
 .default-task h2 {
@@ -258,23 +275,88 @@ form button {
 }
 
 
+.task-item {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--task-item-color);
+    border: 2px solid var(--black-color);
+    border-radius: 0.4rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
 
+.task-item:hover {
+    box-shadow: -0.3px -0.3px 0 var(--black-color);
+}
 
+@media (max-width: 600px) {
+    
+    .task-item {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .text-content {
+        width: 100%;
+        flex-direction: column;
+    }
 
+    .item-task {
+        width: 100%;
+    }
 
+    .text-content .delete-btn {
+        width: 100%;
+    }
+}
 
+@media (max-width: 400px) {
 
+    .task-item .text-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
 
+.task-item .text-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
 
+.text-content h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--black-color);
+}
 
+.text-content span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black-color);
+}
 
+.task-item button {
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--red-button);
+    color: var(--white-color);
+    border: 2px solid var(--black-color);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 var(--black-color);
+}
 
-
-
-
-
-
-
-
+.task-item button:active {
+    box-shadow: 0 0 0 var(--black-color);
+    transform: translate(1px);
+}
