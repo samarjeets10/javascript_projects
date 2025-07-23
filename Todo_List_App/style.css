@@ -160,6 +160,11 @@ form button {
     cursor: pointer;
 }
 
+form button:active {
+    box-shadow: 1px 1px 0 var(--black-color);
+    transform: translate(2px, 2px);
+}
+
 
 @media (max-width: 600px) {
     .title-text h1 {

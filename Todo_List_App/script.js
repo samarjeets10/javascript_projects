@@ -79,7 +79,7 @@ function alertPopUp() {
     setTimeout(() => {
         alertTosterPopup.classList.remove('active');
     }, 2000);
-}
+};
 
 
 
