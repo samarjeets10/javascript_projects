@@ -82,25 +82,3 @@ function dislike (btn, likeCount) {
     return likeCount -= 1;
 };
 
-
-
-
-// Code pop up Window open and close :
-
-const codeBtn = document.querySelectorAll('.codeBtn');
-const codeWindow = document.querySelector('.wrapper');
-const closeBtn = document.querySelector('.close-btn');
-
-
-codeBtn.forEach(function (btn) {
-    btn.addEventListener('click', () => {
-        codeWindow.classList.add("active");
-        document.body.classList.add('lock-scroll');
-    })
-});
-
-closeBtn.addEventListener('click', () => {
-    codeWindow.classList.remove("active");
-    document.body.classList.remove('lock-scroll');
-});
-
