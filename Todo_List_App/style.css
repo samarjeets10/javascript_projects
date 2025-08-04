@@ -39,13 +39,13 @@
 
 body {
     width: 100%;
-    /* height: 100dvh; */
+    min-height: 100vh;
     font-family: var(--font);
 }
 
 .nav-bar {
     width: 100%;
-    padding: 1.1em 4em;
+    padding: 1.1em 14em;
     background-color: var(--nav-background);
     border-bottom: 3px solid var(--black-color);
     display: flex;
@@ -353,12 +353,26 @@ form button:active {
     padding: 0.4rem 0.6rem;
     font-size: 1rem;
     font-weight: 500;
-    background-color: var(--red-button);
     color: var(--white-color);
     border: 2px solid var(--black-color);
     border-radius: 0.4rem;
     cursor: pointer;
     box-shadow: 1px 1px 0 var(--black-color);
+}
+
+.task-item .complete-btn {
+    background-color: var(--green-button);
+}
+
+.task-item .inputTask.completed {
+    text-decoration: line-through;
+    /* color: var(--green-button); */
+    color: rgb(74, 72, 72);
+    opacity: 0.5;
+}
+
+.task-item .delete-btn {
+    background-color: var(--red-button);
 }
 
 .task-item button:active {
@@ -374,7 +388,7 @@ form button:active {
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    border: 1px solid var(--black-color);
+    border: 2px solid var(--black-color);
     background: var(--green-button);
     border-radius: 0.4rem;
     opacity: 0;

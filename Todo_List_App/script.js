@@ -21,7 +21,6 @@ addTaskBtn.addEventListener('click', (task) => {
 function vallidation (userInput, userDate) {
 
     if (userInput === "" || userDate === "") {
-        // alert("Please enter task and date");
         alertPopUp();
     } else {
         addTask(userInput, userDate);
@@ -46,6 +45,7 @@ function addTask(userInput, userDate) {
             <h3 class="inputTask">${userInput}</h3>
             <span class="inputDate">${userDate}</span>
         </div>
+        <button class="complete-btn">Complete</button>
         <button class="delete-btn">Delete</button>
     `;
 
@@ -71,6 +71,20 @@ taskContainer.addEventListener('click', (event) => {
         defaultCard.classList.remove('active');
     }
 });
+
+
+
+
+taskContainer.addEventListener('click', function(event) {
+
+    if (event.target.classList.contains('complete-btn')) {
+        const taskComplete = event.target.closest('.task-item');
+        const taskText = taskComplete.querySelector('.inputTask');
+        taskText.classList.toggle('completed');
+    }
+});
+
+
 
 function alertPopUp() {
 
