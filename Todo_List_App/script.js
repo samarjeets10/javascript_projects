@@ -26,8 +26,7 @@ function vallidation (userInput, userDate) {
         addTask(userInput, userDate);
         defaultCardRemove();
     }
-}
-
+};
 
 function defaultCardRemove () {
 
@@ -35,6 +34,14 @@ function defaultCardRemove () {
 }
 
 function addTask(userInput, userDate) {
+
+    const task = {
+        text: userInput,
+        date: userDate,
+        completed: false
+    }
+
+    saveLocalStorage(task);
 
     const containerEle = document.createElement('div');
     containerEle.setAttribute('class', 'task-item');
@@ -51,12 +58,21 @@ function addTask(userInput, userDate) {
 
     taskContent.appendChild(containerEle);
     inputCleanUp();
+};
+
+function saveLocalStorage(task) {
+
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
 
 function inputCleanUp () {
     inputTask.value = "";
     inputDate.value = "";
-}
+};
+
 
 taskContainer.addEventListener('click', (event) => {
 
@@ -73,8 +89,6 @@ taskContainer.addEventListener('click', (event) => {
 });
 
 
-
-
 taskContainer.addEventListener('click', function(event) {
 
     if (event.target.classList.contains('complete-btn')) {
@@ -83,7 +97,6 @@ taskContainer.addEventListener('click', function(event) {
         taskText.classList.toggle('completed');
     }
 });
-
 
 
 function alertPopUp() {

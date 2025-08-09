@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Buttons Component Library</title>
-    <!-- font awesome icon link -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Remix icon link -->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <!-- css style link -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/CSS_Button_component_library/Style/Button_style.css">
@@ -14,24 +14,47 @@
 <body>
     <!-- Code container -->
 
-    <div class="code-overlay">
-        <div class="code-container">
-            <div class="container-header">
-                <h3>Ghost Button with back Light</h3>
-                <button class="close-btn">✕</button>
+    <div class="overlay">
+        <div class="inner-container">
+            <div class="inner-container_header">
+                <div class="header_left">
+                    <div class="box" id="red"></div>
+                    <div class="box" id="yellow"></div>
+                    <div class="box" id="green"></div>
+                </div>
+                <div class="header_right">
+                    <button class="close-btn"><i class="ri-close-line"></i></button>
+                </div>
+            </div>
+            <div class="code-container">
+                <div class="tab-bar">
+                    <p class="tab" id="html">HTML</p>
+                    <p class="tab" id="css">CSS</p>
+                </div>
+                <div class="code-content">
+                    <div class="content">
+                        <p class="code">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, neque!</p>
+                    </div>
+                    <div class="content">
+                        <p class="code">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo officia nulla sequi atque omnis? Quae dignissimos, suscipit temporibus adipisci id cupiditate neque reprehenderit minus doloribus molestiae cum consequatur eos tenetur.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+  
     <!-- code container ends -->
+
+
      <!-- Heared nav Bar -->
     <header>
         <h3>Button.</h3>
         <div class="toggler">
-            <span aria-label="Light mode">🔆</span>
+            <span aria-label="Light mode"><i class="ri-sun-line"></i></span>
             <!-- Toggle button -->
             <div class="mode-btn"></div>
             <!--  -->
-            <span aria-label="Dark mode">✨</span>
+            <span aria-label="Dark mode"><i class="ri-moon-line"></i></span>
         </div>
     </header>
     <!--header nav Bar ends -->
@@ -40,10 +63,10 @@
         <div class="main-Title">
             <h1>Speed up your UI with reusable CSS button components</h1>
             <p>A collection of clean, responsive, and fully customizable buttons to save time, reduce redundancy, and improve consistency.</p>
-            <a href="#buttons" class="cta-btn">Explore Buttons →</a>
+            <a href="#buttons" class="cta-btn">Explore Buttons <span><i class="ri-arrow-right-line"></i></span></a>
         </div>
 
-        <div class="grid-container">
+        <div class="grid-container" id="buttons">
 
             <!-- grid item -->
 
@@ -57,13 +80,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -82,13 +105,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -104,13 +127,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -126,13 +149,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -149,13 +172,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -175,13 +198,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                       <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -197,13 +220,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -219,13 +242,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -240,13 +263,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -262,13 +285,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -283,13 +306,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                       <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -304,13 +327,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                       <i class="ri-heart-fill  likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -329,13 +352,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -350,13 +373,13 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
@@ -373,28 +396,20 @@
                     <!--  -->
 
                     <div class="copy-code codeBtn">
-                        <i class="fa-solid fa-code code-popUp"></i>
+                        <i class="ri-code-s-slash-line"></i>
                     </div>
                 </div>
                 <div class="discription">
                     <p>Lorem ipsum dolor sit.</p>
                     <div class="rating">
-                        <i class="fa-solid fa-star likeBtn"></i>
+                        <i class="ri-heart-fill likeBtn"></i>
                         <span class="like-count">0</span>
                     </div>
                 </div>
             </div>
 
-            
-            
             <!-- grid item end  -->
-
-            
-
-
-
-
-            <!-- grid items end -->
+        <!-- grid items end -->
 
         </div>
     </main>
@@ -406,16 +421,16 @@
 
         <div class="contact-me">
             <a href="https://github.com/samarjeets10" target="_blank">
-                <i class="fa-brands fa-github"></i>
+                <i class="ri-github-line"></i>
             </a>
             <a href="https://www.linkedin.com/in/samarjeet-sabale-9254b82ba/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="ri-linkedin-box-fill"></i>
             </a>
             <a href="https://x.com/SamarjeetSabale" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
+                <i class="ri-twitter-x-fill"></i>
             </a>
             <a href="https://www.instagram.com/samarjeet0521/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
+                <i class="ri-instagram-fill"></i>
             </a>
         </div>
     </footer>

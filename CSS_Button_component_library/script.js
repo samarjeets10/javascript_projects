@@ -72,7 +72,7 @@ likeBtn.forEach((btn, index) => {
 
 });
 
-function like (btn, _likeCount) {
+function like (btn, likeCount) {
     btn.classList.add('active');
     return likeCount =+ 1;
 }
@@ -81,4 +81,54 @@ function dislike (btn, likeCount) {
     btn.classList.remove('active');
     return likeCount -= 1;
 };
+
+
+const tabs = document.querySelectorAll('.tab');
+const all_content = document.querySelectorAll('.code-content .content');
+
+tabs.forEach( (tab, index) => {
+    tab.addEventListener('click', (e) => {
+        tabs.forEach((tab) => {
+            tab.classList.remove('active');
+        })
+        tab.classList.add('active');
+
+        all_content.forEach((content) => {
+            content.classList.remove('active');
+        })
+        all_content[index].classList.add('active');
+    })
+})
+
+
+const closeBtn = document.querySelector('.close-btn');
+const overlay = document.querySelector('.overlay');
+const getCodeBtn = document.querySelectorAll('.codeBtn');
+
+getCodeBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        openOverlay();
+    })
+})
+
+closeBtn.addEventListener('click', () => {
+    closeOverlay();
+})
+
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        closeOverlay();
+    }
+})
+
+
+function openOverlay() {
+    overlay.classList.add('open');
+    document.querySelector('body').classList.add('lock-scroll');
+}
+
+function closeOverlay () {
+    overlay.classList.remove('open');
+    document.querySelector('body').classList.remove('lock-scroll');
+}
 
